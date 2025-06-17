@@ -10,7 +10,6 @@ This project implements an automated pipeline for:
 - Benchmark testing across varying prompt difficulty levels
 
 
-
 ## Project Structure
 
 ```plaintext
@@ -24,6 +23,11 @@ This project implements an automated pipeline for:
 ├── results/                   # Stores generated images
 └── notebooks/                 # Visualization
 ```
+
+
+| ![Img1](assets/image1.png) ![Img2](assets/image2.png)![Img2](assets/image3.png) | ![Img3](assets/image4.png)![Img4](assets/image5.png) |
+|:--------------------------------------------------------------------------------|:-----------------------------------------------------|
+
 
 ## Model Selection
 
