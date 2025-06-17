@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a hunting pose with dramatic shadows, high contrast",
+    "generation_prompt": "cat in a hunting pose with dramatic shadows, high contrast",
+    "difficulty": "medium",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

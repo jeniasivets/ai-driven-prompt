@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a natural hunting stance with dappled sunlight, birds in the background, telephoto lens",
+    "generation_prompt": "cat in a natural hunting stance with dappled sunlight, birds in the background, telephoto lens",
+    "difficulty": "high",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

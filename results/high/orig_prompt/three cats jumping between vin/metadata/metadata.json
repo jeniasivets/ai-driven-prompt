@@ -1,0 +1,9 @@
+{
+    "original_prompt": "three cats jumping between vintage furniture, dynamic lighting, detailed environment",
+    "generation_prompt": "three cats jumping between vintage furniture, dynamic lighting, detailed environment",
+    "difficulty": "high",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

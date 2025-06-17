@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat drinking from a crystal water bowl, studio lighting",
+    "generation_prompt": "cat drinking from a crystal water bowl, studio lighting",
+    "difficulty": "low",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

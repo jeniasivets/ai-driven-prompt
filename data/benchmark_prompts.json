@@ -1,0 +1,23 @@
+{
+    "low": [
+        "cat sitting on a windowsill, morning sunlight",
+        "cat sleeping on a leather couch, warm lighting",
+        "cat playing with a red ball of yarn, soft focus",
+        "cat drinking from a crystal water bowl, studio lighting",
+        "cat stretching on a Persian carpet, golden hour"
+    ],
+    "medium": [
+        "close-up portrait of a cat's face with alert expression, professional photography",
+        "two cats playing with a toy mouse, dynamic composition, natural lighting",
+        "cat in a sunbeam with dust particles visible, cinematic lighting",
+        "cat in a hunting pose with dramatic shadows, high contrast",
+        "cat and kitten in a relaxed pose, soft natural lighting, shallow depth of field"
+    ],
+    "high": [
+        "three cats jumping between vintage furniture, dynamic lighting, detailed environment",
+        "cat in a natural hunting stance with dappled sunlight, birds in the background, telephoto lens",
+        "two cats in a playful chase scene, multiple light sources, motion blur",
+        "cat in a complex scene with toys, scratching post, and cat tree, wide angle shot",
+        "multiple cats in a dynamic action scene, natural reflections, various cat toys, professional studio setup"
+    ]
+} 

@@ -1,0 +1,9 @@
+{
+    "original_prompt": "two cats playing with a toy mouse, dynamic composition, natural lighting",
+    "generation_prompt": "two cats playing with a toy mouse, dynamic composition, natural lighting",
+    "difficulty": "medium",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

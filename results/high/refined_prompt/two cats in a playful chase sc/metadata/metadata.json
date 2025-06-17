@@ -1,0 +1,9 @@
+{
+    "original_prompt": "two cats in a playful chase scene, multiple light sources, motion blur",
+    "generation_prompt": "Two highly detailed cats engaged in a lively, playful chase scene under multiple dynamic light sources, with realistic motion blur capturing energetic movement, cinematic lighting, and professional composition, set in a vibrant, environmentally rich indoor/outdoor setting with sharp focus on fur textures and expressive details, captured with a high-quality camera, 50mm lens, in a photorealistic, masterpiece style.",
+    "difficulty": "high",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

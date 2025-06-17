@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat and kitten in a relaxed pose, soft natural lighting, shallow depth of field",
+    "generation_prompt": "cat and kitten in a relaxed pose, soft natural lighting, shallow depth of field",
+    "difficulty": "medium",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

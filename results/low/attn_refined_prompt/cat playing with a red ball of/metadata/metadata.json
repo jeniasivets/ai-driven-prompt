@@ -1,0 +1,17 @@
+{
+    "original_prompt": "cat playing with a red ball of yarn, soft focus",
+    "generation_prompt": "cat playing with a red ball of yarn, soft focus",
+    "difficulty": "low",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "red ball of yarn"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

@@ -1,0 +1,9 @@
+{
+    "original_prompt": "multiple cats in a dynamic action scene, natural reflections, various cat toys, professional studio setup",
+    "generation_prompt": "multiple cats in a dynamic action scene, natural reflections, various cat toys, professional studio setup",
+    "difficulty": "high",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

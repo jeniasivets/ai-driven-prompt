@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat sleeping on a leather couch, warm lighting",
+    "generation_prompt": "A highly detailed, photorealistic image of a cat sleeping peacefully on a luxurious leather couch, illuminated by soft, warm lighting that enhances the cozy atmosphere; captured with professional photography style, showcasing natural textures and intricate fur details, with a focus on realistic lighting, depth of field, and environmental warmth.",
+    "difficulty": "low",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

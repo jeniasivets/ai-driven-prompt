@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat stretching on a Persian carpet, golden hour",
+    "generation_prompt": "A highly detailed, photorealistic image of a cat stretching gracefully on an ornate Persian carpet during golden hour, with warm, cinematic lighting that emphasizes soft shadows and rich textures; captured with a professional camera using a 50mm lens, emphasizing sharpness, environmental depth, and intricate fur detail.",
+    "difficulty": "low",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

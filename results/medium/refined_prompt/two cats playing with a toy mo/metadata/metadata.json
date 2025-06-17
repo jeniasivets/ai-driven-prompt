@@ -1,0 +1,9 @@
+{
+    "original_prompt": "two cats playing with a toy mouse, dynamic composition, natural lighting",
+    "generation_prompt": "two cats playing with a toy mouse, highly detailed and realistic, cinematic lighting, dynamic composition, captured with a professional DSLR camera, 50mm lens, natural daylight, vibrant fur textures, expressive poses, detailed environment with soft shadows, photorealistic, masterpiece",
+    "difficulty": "medium",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

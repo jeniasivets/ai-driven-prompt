@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat sleeping on a leather couch, warm lighting",
+    "generation_prompt": "cat sleeping on a leather couch, warm lighting",
+    "difficulty": "low",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

@@ -1,0 +1,17 @@
+{
+    "original_prompt": "three cats jumping between vintage furniture, dynamic lighting, detailed environment",
+    "generation_prompt": "three cats jumping between vintage furniture, dynamic lighting, detailed environment",
+    "difficulty": "high",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "analyze"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

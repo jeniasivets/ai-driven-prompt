@@ -1,0 +1,9 @@
+{
+    "original_prompt": "multiple cats in a dynamic action scene, natural reflections, various cat toys, professional studio setup",
+    "generation_prompt": "A highly detailed, photorealistic depiction of multiple cats in a dynamic action scene, captured with cinematic lighting and professional studio setup. Features include natural reflections on surfaces, a variety of colorful cat toys, and precisely rendered fur textures. Shot with a high-resolution camera using a macro lens, emphasizing sharp focus and vibrant detail. Environmental elements like a sleek studio backdrop and subtle reflections enhance the scene\u2019s realism, creating a captivating and energetic feline composition.",
+    "difficulty": "high",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

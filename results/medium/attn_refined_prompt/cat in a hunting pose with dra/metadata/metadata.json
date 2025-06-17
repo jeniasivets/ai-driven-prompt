@@ -1,0 +1,17 @@
+{
+    "original_prompt": "cat in a hunting pose with dramatic shadows, high contrast",
+    "generation_prompt": "cat in a hunting pose with dramatic shadows, high contrast",
+    "difficulty": "medium",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "cat"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

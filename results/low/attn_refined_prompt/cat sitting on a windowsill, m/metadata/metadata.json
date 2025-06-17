@@ -1,0 +1,17 @@
+{
+    "original_prompt": "cat sitting on a windowsill, morning sunlight",
+    "generation_prompt": "cat sitting on a windowsill, morning sunlight",
+    "difficulty": "low",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "cat"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

@@ -1,0 +1,17 @@
+{
+    "original_prompt": "two cats in a playful chase scene, multiple light sources, motion blur",
+    "generation_prompt": "two cats in a playful chase scene, multiple light sources, motion blur",
+    "difficulty": "high",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "analyze"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

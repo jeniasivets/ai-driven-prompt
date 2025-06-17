@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a hunting pose with dramatic shadows, high contrast",
+    "generation_prompt": "A highly detailed, photorealistic image of a cat in a dynamic hunting pose, featuring dramatic shadows and high contrast lighting, captured with cinematic lighting and shallow depth of field. Emphasize sharp focus on the cat's fur and piercing eyes, set against a natural outdoor environment with lush foliage and textured ground, using a professional DSLR camera with a 85mm lens for realistic proportions and environmental detail. Style throughout should evoke a masterpiece with a cinematic, intense atmosphere.",
+    "difficulty": "medium",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

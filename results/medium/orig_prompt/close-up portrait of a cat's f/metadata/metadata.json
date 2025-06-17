@@ -1,0 +1,9 @@
+{
+    "original_prompt": "close-up portrait of a cat's face with alert expression, professional photography",
+    "generation_prompt": "close-up portrait of a cat's face with alert expression, professional photography",
+    "difficulty": "medium",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

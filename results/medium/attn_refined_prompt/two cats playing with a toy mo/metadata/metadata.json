@@ -1,0 +1,17 @@
+{
+    "original_prompt": "two cats playing with a toy mouse, dynamic composition, natural lighting",
+    "generation_prompt": "two cats playing with a toy mouse, dynamic composition, natural lighting",
+    "difficulty": "medium",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "playing"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

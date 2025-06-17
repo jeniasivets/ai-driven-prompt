@@ -1,0 +1,9 @@
+{
+    "original_prompt": "close-up portrait of a cat's face with alert expression, professional photography",
+    "generation_prompt": "Close-up portrait of a cat's face with an alert expression, highly detailed and photorealistic, professional photography style, cinematic soft lighting, shallow depth of field, vibrant colors, capturing intricate fur textures and expressive eyes, shot with a macro lens (100mm), environmental details of a cozy indoor setting with subtle background blur, emphasizing clarity and high resolution, masterpiece quality",
+    "difficulty": "medium",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

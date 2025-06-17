@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat drinking from a crystal water bowl, studio lighting",
+    "generation_prompt": "A highly detailed, photorealistic image of a cat drinking from a crystal water bowl, illuminated by soft studio lighting, showcasing realistic fur texture and reflections, with a clean, minimalistic background and subtle depth of field for professional photography quality.",
+    "difficulty": "low",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

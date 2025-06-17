@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a natural hunting stance with dappled sunlight, birds in the background, telephoto lens",
+    "generation_prompt": "A highly detailed, photorealistic image of a cat in a natural hunting stance, captured with cinematic lighting and shallow depth of field. The scene features dappled sunlight filtering through leaves, emphasizing the cat's fur texture and intense focus. In the background, realistic birds are visible with detailed plumage, enhancing the natural environment. Shot with a telephoto lens, mimicking professional wildlife photography, showcasing environmental richness and precise composition. Style: highly detailed, masterpiece, professional photography, outdoor natural lighting.",
+    "difficulty": "high",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

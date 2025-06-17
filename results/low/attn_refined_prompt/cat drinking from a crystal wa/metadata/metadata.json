@@ -1,0 +1,17 @@
+{
+    "original_prompt": "cat drinking from a crystal water bowl, studio lighting",
+    "generation_prompt": "cat drinking from a crystal water bowl, studio lighting",
+    "difficulty": "low",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "cat drinking"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

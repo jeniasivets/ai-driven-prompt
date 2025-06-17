@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat playing with a red ball of yarn, soft focus",
+    "generation_prompt": "cat playing with a red ball of yarn, soft focus",
+    "difficulty": "low",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

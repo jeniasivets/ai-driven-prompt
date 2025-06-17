@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat stretching on a Persian carpet, golden hour",
+    "generation_prompt": "cat stretching on a Persian carpet, golden hour",
+    "difficulty": "low",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

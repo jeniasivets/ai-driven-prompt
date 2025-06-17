@@ -1,0 +1,17 @@
+{
+    "original_prompt": "cat in a complex scene with toys, scratching post, and cat tree, wide angle shot",
+    "generation_prompt": "cat in a complex scene with toys, scratching post, and cat tree, wide angle shot",
+    "difficulty": "high",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "Analyze"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

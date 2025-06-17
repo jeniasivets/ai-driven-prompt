@@ -1,0 +1,17 @@
+{
+    "original_prompt": "cat sleeping on a leather couch, warm lighting",
+    "generation_prompt": "cat sleeping on a leather couch, warm lighting",
+    "difficulty": "low",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "cat sleeping"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

@@ -1,0 +1,9 @@
+{
+    "original_prompt": "two cats in a playful chase scene, multiple light sources, motion blur",
+    "generation_prompt": "two cats in a playful chase scene, multiple light sources, motion blur",
+    "difficulty": "high",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

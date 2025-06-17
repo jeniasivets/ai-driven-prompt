@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a sunbeam with dust particles visible, cinematic lighting",
+    "generation_prompt": "cat in a sunbeam with dust particles visible, cinematic lighting",
+    "difficulty": "medium",
+    "prompt_type": "orig_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

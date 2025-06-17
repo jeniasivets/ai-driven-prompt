@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat and kitten in a relaxed pose, soft natural lighting, shallow depth of field",
+    "generation_prompt": "A highly detailed and photorealistic depiction of a cat and kitten in a relaxed pose, illuminated by soft natural lighting and captured with a cinematic shallow depth of field, emphasizing their fur textures and gentle expressions, composed in an intimate, serene setting with professional photography style, using a 50mm lens in natural outdoor environment.",
+    "difficulty": "medium",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

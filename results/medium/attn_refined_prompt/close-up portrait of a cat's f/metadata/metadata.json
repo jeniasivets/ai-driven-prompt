@@ -1,0 +1,17 @@
+{
+    "original_prompt": "close-up portrait of a cat's face with alert expression, professional photography",
+    "generation_prompt": "close-up portrait of a cat's face with alert expression, professional photography",
+    "difficulty": "medium",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "close-up"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

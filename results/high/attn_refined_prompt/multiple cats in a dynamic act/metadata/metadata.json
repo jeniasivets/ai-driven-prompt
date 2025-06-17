@@ -1,0 +1,17 @@
+{
+    "original_prompt": "multiple cats in a dynamic action scene, natural reflections, various cat toys, professional studio setup",
+    "generation_prompt": "multiple cats in a dynamic action scene, natural reflections, various cat toys, professional studio setup",
+    "difficulty": "high",
+    "prompt_type": "attn_refined_prompt",
+    "cross_attention_kwargs": {
+        "edit_type": "reweight",
+        "equalizer_words": [
+            "analyze"
+        ],
+        "equalizer_strengths": [
+            5.0
+        ]
+    },
+    "seed": 0,
+    "inference_steps": 20
+}

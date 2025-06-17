@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a complex scene with toys, scratching post, and cat tree, wide angle shot",
+    "generation_prompt": "A highly detailed, photorealistic wide-angle shot of a domestic cat amidst a complex, vibrant scene featuring colorful toys, a scratching post, and an elaborate cat tree, illuminated with natural, soft lighting, showcasing intricate fur textures and realistic environment details, captured with a professional camera using a 24mm lens for cinematic composition, emphasizing depth and clarity, in the style of high-quality pet photography and masterful environmental storytelling.",
+    "difficulty": "high",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

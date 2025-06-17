@@ -1,0 +1,9 @@
+{
+    "original_prompt": "cat in a sunbeam with dust particles visible, cinematic lighting",
+    "generation_prompt": "A highly detailed, photorealistic image of a domestic cat basking in a sunbeam, with visible dust particles floating in the warm, cinematic lighting. The scene features soft, natural light streaming through a window, illuminating the cat's fur with fine texture and subtle shadows. Emphasize the intricate fur details, capturing the gentle expression of the cat, while showcasing environmental elements like light-filled dust motes, a cozy indoor setting, and a shallow depth of field. Use a high-resolution, professional photography style with realistic camera settings such as a 50mm lens, f/1.4 aperture, and cinematic glow.",
+    "difficulty": "medium",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}

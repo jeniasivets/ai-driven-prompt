@@ -1,0 +1,9 @@
+{
+    "original_prompt": "three cats jumping between vintage furniture, dynamic lighting, detailed environment",
+    "generation_prompt": "Three highly detailed cats mid-air leaping between vintage antique furniture, cinematic dynamic lighting highlighting fur textures and motion, intricate and lush environment with rich textures, professional photography style, shot with a 50mm lens in natural sunlight, highly detailed, masterpiece, photorealistic, cinematic lighting, environmental richness",
+    "difficulty": "high",
+    "prompt_type": "refined_prompt",
+    "cross_attention_kwargs": null,
+    "seed": 0,
+    "inference_steps": 20
+}
