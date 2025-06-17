@@ -20,7 +20,7 @@ This project implements an automated pipeline for:
 │   └── run_evaluate.py        # Evaluate benchmark execution
 ├── data/
 │   └── benchmark_prompts.json # Prompts categorized by difficulty
-├── results/                   # Stores generated images
+├── results/                   # Stores generated images with metadata
 └── notebooks/                 # Visualization
 ```
 
@@ -45,7 +45,11 @@ Utilizes **Stable Diffusion XL (SDXL)**, chosen for its strong community support
 - Integration with diffusers `StableDiffusionXLPipeline`
 - Support for various generation parameters
 - Attention control mechanisms
-- Automated pipeline execution
+- Fully automated pipeline for scalable image generation
+- Each generated image is supplemented with detailed metadata, including:
+  - The original unmodified prompt from benchmark
+  - The prompt used during generation
+  - Generation parameters, etc.
 
 ### 3. Evaluation Pipeline
 - CLIP score for prompt-image alignment [[Link]](https://github.com/linzhiqiu/t2v_metrics)
