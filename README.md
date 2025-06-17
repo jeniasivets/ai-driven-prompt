@@ -65,3 +65,11 @@ Prompts are categorized by difficulty and generated automatically:
 - **Medium**: Moderate complexity, multiple objects, facial expressions.
 - **High**: Complex multi-object scenes, detailed environments, advanced lighting.
 
+### References and Inspiration
+
+- **Leveraging Large Language Models for text prompt enhancement**:  
+  - *"HunyuanVideo: A Systematic Framework For Large Video Generative Models"*, [[Link]](https://arxiv.org/abs/2412.03603).
+
+- **Attention reweighting and manipulation techniques**:  
+  - *"Prompt-to-Prompt Image Editing with Cross Attention Control"*, [[Link]](https://arxiv.org/abs/2208.01626).
+  - *"Attend-and-Excite: Attention-Based Semantic Guidance for Text-to-Image Diffusion Models"*, [[Link]](https://arxiv.org/abs/2301.13826).
