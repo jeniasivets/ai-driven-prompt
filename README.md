@@ -37,8 +37,9 @@ Utilizes **Stable Diffusion XL (SDXL)**, chosen for its strong community support
 
 ### 1. Prompt Enhancement
 - **LLM-based Prompt Refinement**: Tailors user prompts to model capabilities
-- **Attention Map Manipulation**: Implements Prompt-to-Prompt techniques for enhanced control [[Link]](https://prompt-to-prompt.github.io)
-  - Techniques include reweighting attention for specific tokens
+- **Automatic Attention Map Manipulation**: Implements Prompt-to-Prompt techniques with automatic LLM analysis [[Link]](https://prompt-to-prompt.github.io)
+  - **Reweight**: Techniques include reweighting attention for specific tokens
+  - **Automatic Token Analysis**: LLM automatically analyzes prompts and extracts key tokens for weighting
 - **Batch Generation**: Multiple seeds for optimal results
 
 ### 2. Image Generation
