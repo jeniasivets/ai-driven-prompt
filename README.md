@@ -13,15 +13,20 @@ This project implements an automated pipeline for:
 ## Project Structure
 
 ```plaintext
-├── src/
+├── src/                    
 │   ├── prompt_refiner.py      # Prompt enhancement strategies
 │   ├── evaluator.py           # Evaluation pipeline
+├── scripts/                
 │   ├── run_generate.py        # Generate benchmark execution
 │   └── run_evaluate.py        # Evaluate benchmark execution
-├── data/
+├── config/                 
+│   └── pipeline_config.json
+├── data/                   
 │   └── benchmark_prompts.json # Prompts categorized by difficulty
 ├── results/                   # Stores generated images with metadata
-└── notebooks/                 # Visualization
+│   └── ...
+├── notebooks/                 # Jupyter notebooks for visualization
+│   └── ...
 ```
 
 
@@ -30,15 +35,19 @@ This project implements an automated pipeline for:
 
 ## Usage
 
-Set your API key and run the generation script:
-
+1. Set your API key.
+2. Run image generation:
 ```bash
 api_key='your_api_key'
-python run_generate.py --config-file='./config/pipeline_config.json' --model-path='./ckpt/sd_xl_base_1.0.safetensors' --api-key="$api_key"
+python scripts/run_generate.py --config-file='./config/pipeline_config.json' --model-path='./ckpt/sd_xl_base_1.0.safetensors' --api-key="$api_key"
 ```
-For additional options, run:
+For more options:
 ```bash
-python run_generate.py --help
+python scripts/run_generate.py --help
+```
+3. Run evaluation:
+```bash
+python scripts/run_evaluate.py
 ```
 
 ## Model Selection

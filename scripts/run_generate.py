@@ -6,11 +6,25 @@ import subprocess
 from diffusers import StableDiffusionXLPipeline
 
 
+def ensure_repos():
+    """Ensure required external repos are cloned and add to sys.path for dynamic import."""
+    repos = [
+        ("./prompt-to-prompt-with-sdxl", "https://github.com/RoyiRa/prompt-to-prompt-with-sdxl"),
+        ('.', '')
+    ]
+    for repo_dir, repo_url in repos:
+        if repo_url and not os.path.exists(repo_dir):
+            print(f"Cloning {repo_url}...")
+            subprocess.run(["git", "clone", repo_url])
+        else:
+            if repo_url:
+                print(f"Repo {repo_dir} already exists.")
+        abs_repo_dir = os.path.abspath(repo_dir)
+        if abs_repo_dir not in sys.path:
+            sys.path.append(abs_repo_dir)
+
+
 def setup_pipelines(config):
-    repo_dir = './prompt-to-prompt-with-sdxl'
-    if not os.path.exists(repo_dir):
-        subprocess.run(["git", "clone", "https://github.com/RoyiRa/prompt-to-prompt-with-sdxl"])
-    sys.path.append(repo_dir)
     from prompt_to_prompt_pipeline import Prompt2PromptPipeline
     from src.prompt_refiner import BatchGenerator
     model_path = config['model_path']
@@ -31,6 +45,7 @@ def generate_original_prompt(batch_generator, prompt, difficulty, config):
                                    cross_attention_kwargs=None,
                                    original_prompt=prompt,
                                    output_dir=config['output_dir'])
+
 
 def generate_llm_refined_prompt(batch_generator, enhancer, prompt, difficulty, config):
     if not config['enable_llm_refined_prompt'] or batch_generator is None:
@@ -83,6 +98,7 @@ def get_model_capabilities():
 
 
 def main(config):
+    ensure_repos()
     batch_generator, attn_batch_generator = setup_pipelines(config)
     with open('./data/benchmark_prompts.json', 'r') as f:
         benchmark_data = json.load(f)
