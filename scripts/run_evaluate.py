@@ -75,7 +75,7 @@ if __name__ == "__main__":
     parser.add_argument('--results-dir', type=str, help='Directory containing generated results')
     parser.add_argument('--device', type=str, choices=['cuda', 'mps'],
                         help='Device to use for evaluation')
-    parser.add_argument('--api_key', type=str, help='OpenAI API key')
+    parser.add_argument('--api-key', type=str, help='OpenAI API key')
     args = parser.parse_args()
 
     # Load config from file
