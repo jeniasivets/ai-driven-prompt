@@ -54,13 +54,7 @@ def main(config):
         all_results[diff_level] = {}
         for prompt_type in prompt_types:
             dir_path = os.path.join(base_path, diff_level, prompt_type)
-            if not os.path.exists(dir_path):
-                print(f"Warning: Directory {dir_path} does not exist. Skipping.")
-                continue
             img_paths, prompts = get_sorted_image_files_and_prompts(dir_path)
-            if not img_paths:
-                print(f"No images found in {dir_path}. Skipping.")
-                continue
             print(f"Evaluating {len(img_paths)} images in {dir_path}...")
             results = evaluator.evaluate_batch(image_paths=img_paths, prompts=prompts)
             analysis = evaluator.analyze_results(results)
