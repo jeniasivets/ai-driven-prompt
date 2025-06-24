@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 from dataclasses import dataclass
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Literal
 import t2v_metrics
 from time import time
 from tifa.tifascore import get_question_and_answers,\
@@ -23,8 +23,8 @@ class EvaluationResult:
 
 
 class EnhancedEvaluator:
-    def __init__(self, 
-                 device: str = "cuda",
+    def __init__(self,
+                 device: Literal["cuda", "mps"] = "cuda",
                  clip_model: str = "openai:ViT-L-14-336",
                  qa_model: str = "allenai/unifiedqa-v2-t5-large-1363200",
                  vqa_model: str = "mplug-large",

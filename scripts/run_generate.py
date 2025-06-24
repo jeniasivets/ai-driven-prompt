@@ -28,11 +28,14 @@ def setup_pipelines(config):
     from prompt_to_prompt_pipeline import Prompt2PromptPipeline
     from src.prompt_refiner import BatchGenerator
     model_path = config['model_path']
+    device = config.get('device', 'cuda')
     batch_generator = attn_batch_generator = None
     if config['enable_original_prompt'] or config['enable_llm_refined_prompt']:
-        batch_generator = BatchGenerator(model_path=model_path, pipe=StableDiffusionXLPipeline, num_seeds=1)
+        batch_generator = BatchGenerator(model_path=model_path, pipe=StableDiffusionXLPipeline,
+                                         device=device, num_seeds=1)
     if config['enable_attn_refined_prompt']:
-        attn_batch_generator = BatchGenerator(model_path=model_path, pipe=Prompt2PromptPipeline, num_seeds=1)
+        attn_batch_generator = BatchGenerator(model_path=model_path, pipe=Prompt2PromptPipeline,
+                                              device=device, num_seeds=1)
     return batch_generator, attn_batch_generator
 
 
@@ -118,6 +121,8 @@ if __name__ == "__main__":
                         help='Path to the model safetensors file')
     parser.add_argument('--output-dir', type=str,
                         help='Output directory for generated images')
+    parser.add_argument('--device', type=str, choices=['cuda', 'mps'],
+                        help='Device to use for generation')
     parser.add_argument('--api-key', type=str, help='OpenAI API key')
     parser.add_argument('--disable-original', action='store_true',
                         help='Disable original prompt generation')
@@ -139,6 +144,8 @@ if __name__ == "__main__":
         config['model_path'] = args.model_path
     if args.output_dir:
         config['output_dir'] = args.output_dir
+    if args.device:
+        config['device'] = args.device
     if args.api_key:
         config['api_key'] = args.api_key
     if args.disable_original:
@@ -147,5 +154,8 @@ if __name__ == "__main__":
         config['enable_llm_refined_prompt'] = False
     if args.disable_attn_refined:
         config['enable_attn_refined_prompt'] = False
+
+    if 'api_key' not in config or not config['api_key']:
+        raise ValueError("api_key must be set in the config file or provided as --api-key.")
 
     main(config)

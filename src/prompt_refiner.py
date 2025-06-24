@@ -1,6 +1,6 @@
 import openai
 import json
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, Literal
 import torch
 from openai import OpenAI
 from diffusers import StableDiffusionXLPipeline
@@ -41,8 +41,8 @@ class PromptRefinementStrategy:
 
 
 class AttentionMapManipulator:
-    def __init__(self):
-        self.max_strength = 5.0
+    def __init__(self, max_strength: float = 5.0):
+        self.max_strength = max_strength
 
     def enhance_prompt(self,
                        prompt: str,
@@ -67,7 +67,9 @@ class AttentionMapManipulator:
 class BatchGenerator:
     def __init__(self,
                  pipe: StableDiffusionXLPipeline | Prompt2PromptPipeline,
-                 model_path: str, device: str = "cuda", num_seeds: int = 1):
+                 model_path: str,
+                 device: Literal["cuda", "mps"] = "cuda",
+                 num_seeds: int = 1):
         """Initialize the batch generator."""
         self.num_seeds = num_seeds
         self.device = device
@@ -78,7 +80,12 @@ class BatchGenerator:
             use_safetensors=True,
             add_watermarker=False
         ).to(self.device)
-        
+
+    def __del__(self):
+        if hasattr(self, 'pipe'):
+            del self.pipe
+            torch.cuda.empty_cache()
+
     def generate_image(self,
                        prompt: str | List[str],
                        difficulty: str | None,
@@ -189,7 +196,7 @@ class PromptEnhancer:
 
         return prompts, cross_attention_kwargs
 
-    def analyze_prompt(self, prompt: str, max_retries=3) -> Dict:
+    def analyze_prompt(self, prompt: str, max_retries: int = 3) -> Dict:
         """Analyze a prompt to suggest key words for attention manipulation."""
         for attempt in range(max_retries):
             try:

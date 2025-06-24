@@ -45,10 +45,12 @@ def ensure_repos():
 
 def main(config):
     ensure_repos()
-    os.environ["OPENAI_API_KEY"] = config['api_key']
+    if 'OPENAI_API_KEY' not in os.environ:
+        os.environ["OPENAI_API_KEY"] = config['api_key']
     from src.evaluator import EnhancedEvaluator
-    evaluator = EnhancedEvaluator()
-    base_path = config.get('results_dir', './results')
+    device = config.get('device', 'cuda')
+    evaluator = EnhancedEvaluator(device=device)
+    base_path = config.get('output_dir', './results')
     difficulties = ['low', 'medium', 'high']
     prompt_types = ['orig_prompt', 'refined_prompt', 'attn_refined_prompt']
     all_results = {}
@@ -71,6 +73,8 @@ if __name__ == "__main__":
     parser.add_argument('--config-file', type=str, default='./config/pipeline_config.json',
                         help='Path to configuration file')
     parser.add_argument('--results-dir', type=str, help='Directory containing generated results')
+    parser.add_argument('--device', type=str, choices=['cuda', 'mps'],
+                        help='Device to use for evaluation')
     parser.add_argument('--api_key', type=str, help='OpenAI API key')
     args = parser.parse_args()
 
@@ -84,7 +88,12 @@ if __name__ == "__main__":
     # CLI overrides
     if args.results_dir:
         config['results_dir'] = args.results_dir
+    if args.device:
+        config['device'] = args.device
     if args.api_key:
         config['api_key'] = args.api_key
+
+    if 'api_key' not in config or not config['api_key']:
+        raise ValueError("api_key must be set in the config file or provided as --api_key.")
 
     main(config)
