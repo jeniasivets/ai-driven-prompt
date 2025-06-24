@@ -38,8 +38,7 @@ This project implements an automated pipeline for:
 1. Set your API key.
 2. Run image generation:
 ```bash
-api_key='your_api_key'
-python scripts/run_generate.py --config-file='./config/pipeline_config.json' --model-path='./ckpt/sd_xl_base_1.0.safetensors' --api-key="$api_key"
+python scripts/run_generate.py --config-file='./config/pipeline_config.json' --model-path='./ckpt/sd_xl_base_1.0.safetensors' --api-key="$your_api_key"
 ```
 For more options:
 ```bash
@@ -47,7 +46,7 @@ python scripts/run_generate.py --help
 ```
 3. Run evaluation:
 ```bash
-python scripts/run_evaluate.py
+python scripts/run_evaluate.py --api-key="$your_api_key"
 ```
 
 ## Model Selection
