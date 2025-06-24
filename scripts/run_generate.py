@@ -12,7 +12,7 @@ def setup_pipelines(config):
         subprocess.run(["git", "clone", "https://github.com/RoyiRa/prompt-to-prompt-with-sdxl"])
     sys.path.append(repo_dir)
     from prompt_to_prompt_pipeline import Prompt2PromptPipeline
-    from prompt_refiner import BatchGenerator
+    from src.prompt_refiner import BatchGenerator
     model_path = config['model_path']
     batch_generator = attn_batch_generator = None
     if config['enable_original_prompt'] or config['enable_llm_refined_prompt']:
@@ -66,7 +66,7 @@ def process_single_prompt(batch_generator, attn_batch_generator, enhancer, promp
 
 
 def get_model_capabilities():
-    """Return SDXL model capabilities description."""
+    """Return model capabilities description for LLM prompt refinement."""
     return """
         Stable Diffusion XL model capabilities:
         - Superior image quality and detail compared to previous models
@@ -86,7 +86,7 @@ def main(config):
     batch_generator, attn_batch_generator = setup_pipelines(config)
     with open('./data/benchmark_prompts.json', 'r') as f:
         benchmark_data = json.load(f)
-    from prompt_refiner import PromptEnhancer
+    from src.prompt_refiner import PromptEnhancer
     enhancer = PromptEnhancer(openai_api_key=config['api_key'], model_capabilities=get_model_capabilities())
 
     for difficulty, prompts in benchmark_data.items():
