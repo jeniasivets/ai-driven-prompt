@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import subprocess
+import argparse
 
 
 def get_sorted_image_files_and_prompts(directory):
@@ -44,6 +45,7 @@ def ensure_repos():
 
 def main(config):
     ensure_repos()
+    os.environ["OPENAI_API_KEY"] = config['api_key']
     from src.evaluator import EnhancedEvaluator
     evaluator = EnhancedEvaluator()
     base_path = config.get('results_dir', './results')
@@ -65,10 +67,24 @@ def main(config):
 
 
 if __name__ == "__main__":
-    config_path = './config/pipeline_config.json'
-    if os.path.exists(config_path):
-        with open(config_path, 'r') as f:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config-file', type=str, default='./config/pipeline_config.json',
+                        help='Path to configuration file')
+    parser.add_argument('--results-dir', type=str, help='Directory containing generated results')
+    parser.add_argument('--api_key', type=str, help='OpenAI API key')
+    args = parser.parse_args()
+
+    # Load config from file
+    if os.path.exists(args.config_file):
+        with open(args.config_file, 'r') as f:
             config = json.load(f)
     else:
-        raise FileNotFoundError(f"Config file {config_path} not found.")
+        raise FileNotFoundError(f"Config file {args.config_file} not found.")
+
+    # CLI overrides
+    if args.results_dir:
+        config['results_dir'] = args.results_dir
+    if args.api_key:
+        config['api_key'] = args.api_key
+
     main(config)

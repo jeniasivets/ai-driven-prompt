@@ -10,9 +10,6 @@ from tifa.tifascore import get_question_and_answers,\
                         tifa_score_single,\
                         VQAModel
 
-import os
-os.environ["OPENAI_API_KEY"] = ''
-
 @dataclass
 class EvaluationResult:
     """Comprehensive evaluation result for a single image-prompt pair."""
