@@ -1,0 +1,8 @@
+{
+    "model_path": "./ckpt/sd_xl_base_1.0.safetensors",
+    "api_key": "YOUR_API_KEY_HERE",
+    "enable_original_prompt": true,
+    "enable_llm_refined_prompt": true,
+    "enable_attn_refined_prompt": true,
+    "output_dir": "./results"
+} 

@@ -189,26 +189,31 @@ class PromptEnhancer:
 
         return prompts, cross_attention_kwargs
 
-    def analyze_prompt(self, prompt: str) -> Dict:
+    def analyze_prompt(self, prompt: str, max_retries=3) -> Dict:
         """Analyze a prompt to suggest key words for attention manipulation."""
+        for attempt in range(max_retries):
+            try:
+                client = OpenAI(api_key=openai.api_key)
+                system_prompt = """You are a prompt analysis expert. Analyze the given prompt and identify:
+                        1. Key action words that should be emphasized
+                        2. Important visual elements
+                        3. Suggested attention strengths for each element
 
-        client = OpenAI(api_key=openai.api_key)
-        system_prompt = """You are a prompt analysis expert. Analyze the given prompt and identify:
-                1. Key action words that should be emphasized
-                2. Important visual elements
-                3. Suggested attention strengths for each element
-
-                Return a JSON with the following structure:
-                {
-                    "key_words": ["word1", "word2", ...],
-                    "strengths": [float1, float2, ...],
-                    "analysis": "brief explanation"
-                }"""
-        response = client.chat.completions.create(
-            model="gpt-4.1-nano",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": f"Analyze this prompt: {prompt}"}
-            ]
-        )
-        return json.loads(response.choices[0].message.content)
+                        Return a JSON with the following structure:
+                        {
+                            "key_words": ["word1", "word2", ...],
+                            "strengths": [float1, float2, ...],
+                            "analysis": "brief explanation"
+                        }"""
+                response = client.chat.completions.create(
+                    model="gpt-4.1-nano",
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": f"Analyze this prompt: {prompt}"}
+                    ]
+                )
+                return json.loads(response.choices[0].message.content)
+            except json.JSONDecodeError as e:
+                print(f"Error analyzing prompt: {prompt}. Attempt {attempt + 1} of {max_retries}. Error: {e}")
+                if attempt == max_retries - 1:
+                    print(f"Failed to analyze prompt after {max_retries} attempts.")

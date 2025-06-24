@@ -28,6 +28,18 @@ This project implements an automated pipeline for:
 | ![Img1](assets/image1.png) ![Img2](assets/image2.png)![Img2](assets/image3.png) | ![Img3](assets/image4.png)![Img4](assets/image5.png) |
 |:--------------------------------------------------------------------------------|:-----------------------------------------------------|
 
+## Usage
+
+Set your API key and run the generation script:
+
+```bash
+api_key='your_api_key'
+python run_generate.py --config-file='./config/pipeline_config.json' --model-path='./ckpt/sd_xl_base_1.0.safetensors' --api-key="$api_key"
+```
+For additional options, run:
+```bash
+python run_generate.py --help
+```
 
 ## Model Selection
 
